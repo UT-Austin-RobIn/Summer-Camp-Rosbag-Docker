@@ -8,3 +8,6 @@ RUN apt-get install -y ros-$(rosversion -d)-turtlesim
 
 RUN echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 RUN echo "alias python=python3" >> ~/.bashrc
+
+RUN apt-get update
+RUN apt-get install -y ros-noetic-tf ros-noetic-tf2-geometry-msgs 
