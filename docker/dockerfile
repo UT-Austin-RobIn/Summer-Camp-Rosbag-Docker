@@ -1,5 +1,7 @@
 FROM ros:noetic
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -yq --no-install-recommends
+RUN apt-get update
+RUN apt-get install -y ros-noetic-cv-bridge ros-noetic-vision-opencv
 
 RUN bash /opt/ros/noetic/setup.bash
 RUN apt-get install -y ros-$(rosversion -d)-turtlesim
