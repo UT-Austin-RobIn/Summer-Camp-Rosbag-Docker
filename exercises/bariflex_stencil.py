@@ -2,8 +2,9 @@
 
 import rospy
 from sensor_msgs.msg import Image
-from cv_bridge import CvBridge, CvBridgeError
 import cv2
+from cv_bridge import CvBridge, CvBridgeError
+
 import tf2_ros
 import tf2_geometry_msgs
 import geometry_msgs.msg
@@ -31,6 +32,7 @@ def color_image_callback(data):
 
 def depth_image_callback(data):
     # TODO: same as above, but for the depth image 
+    # cv_image = bridge.imgmsg_to_cv2(data, "16UC1")
 
 def main():
     
